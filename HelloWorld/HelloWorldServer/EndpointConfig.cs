@@ -9,6 +9,7 @@ namespace HelloWorldServer
             Configure.With()
                 .DefaultBuilder()
                 .XmlSerializer("http://acme.com")
+                .RijndaelEncryptionService()
                 .RunCustomAction(() => Configure.Instance.Configurer.ConfigureComponent<SaySomething>(DependencyLifecycle.SingleInstance));
         }
 
