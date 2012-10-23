@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldServer", "HelloWorldServer\HelloWorldServer.csproj", "{680139D5-49F8-42A0-874F-88BB2A500DA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityServiceAdapter", "SecurityServiceAdapter\SecurityServiceAdapter.csproj", "{6150C9DC-540A-4F0F-9A35-0D478DD8D912}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{680139D5-49F8-42A0-874F-88BB2A500DA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{680139D5-49F8-42A0-874F-88BB2A500DA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{680139D5-49F8-42A0-874F-88BB2A500DA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6150C9DC-540A-4F0F-9A35-0D478DD8D912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6150C9DC-540A-4F0F-9A35-0D478DD8D912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6150C9DC-540A-4F0F-9A35-0D478DD8D912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6150C9DC-540A-4F0F-9A35-0D478DD8D912}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

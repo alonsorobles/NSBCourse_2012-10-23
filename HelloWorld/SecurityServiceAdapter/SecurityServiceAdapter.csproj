@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{680139D5-49F8-42A0-874F-88BB2A500DA9}</ProjectGuid>
+    <ProjectGuid>{6150C9DC-540A-4F0F-9A35-0D478DD8D912}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HelloWorldServer</RootNamespace>
-    <AssemblyName>HelloWorldServer</AssemblyName>
+    <RootNamespace>SecurityServiceAdapter</RootNamespace>
+    <AssemblyName>SecurityServiceAdapter</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,14 +39,8 @@
     <Reference Include="NServiceBus.Core">
       <HintPath>..\packages\NServiceBus.3.2.8\lib\net40\NServiceBus.Core.dll</HintPath>
     </Reference>
-    <Reference Include="NServiceBus.Host">
-      <HintPath>..\packages\NServiceBus.Host.3.2.8\lib\net40\NServiceBus.Host.exe</HintPath>
-    </Reference>
-    <Reference Include="StructureMap, Version=2.6.2.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\NServiceBus.StructureMap262.2.6.0.1511\lib\net40\StructureMap.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -55,27 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Auth.cs" />
-    <Compile Include="EndpointConfig.cs" />
-    <Compile Include="ISaySomething.cs" />
+    <Compile Include="RijndaelEncryptionServiceConfigOverride.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequestHandler.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Messages\Messages.csproj">
-      <Project>{37960667-2C34-4276-862A-2696549F5671}</Project>
-      <Name>Messages</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SecurityServiceAdapter\SecurityServiceAdapter.csproj">
-      <Project>{6150c9dc-540a-4f0f-9a35-0d478dd8d912}</Project>
-      <Name>SecurityServiceAdapter</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -85,8 +63,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <PropertyGroup>
-    <StartAction>Program</StartAction>
-    <StartProgram>$(ProjectDir)$(OutputPath)NServiceBus.Host.exe</StartProgram>
-  </PropertyGroup>
 </Project>
