@@ -7,10 +7,9 @@ namespace HelloWorldServer
         public void Init()
         {
             Configure.With()
-                .DefaultBuilder()
+                .StructureMapBuilder(StructureMapConfig.Container)
                 .XmlSerializer("http://acme.com")
-                .RijndaelEncryptionService()
-                .RunCustomAction(() => Configure.Instance.Configurer.ConfigureComponent<SaySomething>(DependencyLifecycle.SingleInstance));
+                .RijndaelEncryptionService();
         }
 
         public void SpecifyOrder(Order order)
