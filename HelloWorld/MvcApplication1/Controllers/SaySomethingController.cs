@@ -1,14 +1,22 @@
-﻿using System.Web.Mvc;
+﻿using System.Globalization;
+using System.Web.Mvc;
 using Messages;
 
 namespace MvcApplication1.Controllers
 {
-    public class SaySomethingController : Controller
+    public class SaySomethingController : AsyncController
     {
-         public ActionResult Index()
-         {
-             MvcApplication.Bus.Send<Request>(m => m.SaySomething = "Say 'WebApp'.");
-             return new ContentResult{Content = "Message sent"};
-         }
+        [AsyncTimeout(50000)]
+        public void IndexAsync(string s)
+        {
+            MvcApplication.Bus.Send<RequestWithResponse>(m => m.SaySomething = "Say 'WebApp'. " + s)
+                .Register<int>(
+                    response => AsyncManager.Parameters["response"] = response.ToString(CultureInfo.InvariantCulture));
+        }
+
+        public ActionResult IndexCompleted(string response)
+        {
+            return new ContentResult {Content = "Response from server - " + response};
+        }
     }
 }

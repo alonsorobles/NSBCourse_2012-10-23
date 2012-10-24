@@ -3,6 +3,7 @@ using System.Data.Entity.Infrastructure;
 using System.Web.Mvc;
 using System.Web.Routing;
 using NServiceBus;
+using NServiceBus.Installation.Environments;
 
 namespace MvcApplication1
 {
@@ -45,9 +46,11 @@ namespace MvcApplication1
                 .DefaultBuilder()
                 .RijndaelEncryptionService()
                 .XmlSerializer("http://acme.com")
+                .InMemoryFaultManagement()
                 .MsmqTransport()
                 .UnicastBus()
-                .SendOnly();
+                .CreateBus()
+                .Start(() => Configure.Instance.ForInstallationOn<Windows>().Install());
         }
     }
 }
