@@ -10,7 +10,7 @@ namespace HelloWorldServer
         
         public void Handle(RequestWithResponse message)
         {
-            Bus.Return(message.SaySomething.Value.Length);
+            Bus.Return(message.SaySomething.Value.Length % 2);
         }
     }
 }
