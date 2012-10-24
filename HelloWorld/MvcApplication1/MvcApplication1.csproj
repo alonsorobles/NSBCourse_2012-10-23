@@ -104,11 +104,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\QueryController.cs" />
     <Compile Include="Controllers\SaySomethingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\NServiceBus\AuthenticationMutator.cs" />
+    <Compile Include="Infrastructure\NServiceBus\Handlers\QueryResultHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
