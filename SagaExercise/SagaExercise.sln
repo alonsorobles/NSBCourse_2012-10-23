@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Billing.Messages", "Billing
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shipping", "Shipping\Shipping.csproj", "{EBE9C388-D24A-4444-85FA-47C5BC21445B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer", "Customer\Customer.csproj", "{C8E95D26-9731-4727-9C23-C9FA421B52B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{EBE9C388-D24A-4444-85FA-47C5BC21445B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBE9C388-D24A-4444-85FA-47C5BC21445B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBE9C388-D24A-4444-85FA-47C5BC21445B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8E95D26-9731-4727-9C23-C9FA421B52B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8E95D26-9731-4727-9C23-C9FA421B52B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8E95D26-9731-4727-9C23-C9FA421B52B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8E95D26-9731-4727-9C23-C9FA421B52B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
